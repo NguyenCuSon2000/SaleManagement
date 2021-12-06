@@ -1,0 +1,5 @@
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\Model.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\Model.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\obj\Debug\Models.csproj.CoreCompileInputs.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\obj\Debug\Model.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\obj\Debug\Model.pdb

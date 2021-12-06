@@ -1,0 +1,20 @@
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\obj\Debug\Interfaces.csprojAssemblyReference.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\bin\Debug\Interfaces.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\bin\Debug\Interfaces.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\bin\Debug\Model.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\bin\Debug\Model.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\bin\Debug\Model.dll.config
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\obj\Debug\Interfaces.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Interfaces\obj\Debug\Interfaces.pdb
+D:\ASP.NET\AnnaShop\Interfaces\bin\Debug\Interfaces.dll
+D:\ASP.NET\AnnaShop\Interfaces\bin\Debug\Interfaces.pdb
+D:\ASP.NET\AnnaShop\Interfaces\bin\Debug\Model.dll
+D:\ASP.NET\AnnaShop\Interfaces\bin\Debug\Model.pdb
+D:\ASP.NET\AnnaShop\Interfaces\bin\Debug\Model.dll.config
+D:\ASP.NET\AnnaShop\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+D:\ASP.NET\AnnaShop\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+D:\ASP.NET\AnnaShop\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+D:\ASP.NET\AnnaShop\Interfaces\obj\Debug\Interfaces.dll
+D:\ASP.NET\AnnaShop\Interfaces\obj\Debug\Interfaces.pdb

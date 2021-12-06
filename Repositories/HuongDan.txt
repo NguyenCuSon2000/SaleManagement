@@ -1,0 +1,3 @@
+﻿Repository là nơi chứa code logic sử lý yêu cầu của người dùng
+Repository có đầy đủ các chức năng thêm sửa xóa tuy nhiên nó không trực tiếp thao tác với cơ sở dữ liệu
+mà sẽ thao tác thông qua DataAccess

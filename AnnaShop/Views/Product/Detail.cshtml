@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<main ng-controller="ProductDetail" class="courses"  ng-init="getProductDetail()">
+        <section style="padding-top: 3em;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="intro-text ">
+                            <h5>
+                                <span><a ng-href="/Home/Index">Trang chủ <i class='fa fa-angle-right'></i></a></span>
+                                <span><a ng-href="/Product/AllProduct"> Sản phẩm <i class='fa fa-angle-right'></i></a></span>
+                                <span class="b-active">{{Product.Name}}</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="single-courses-area" style="padding-top:3em;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="small-imgs col-sm-12" style="padding-bottom: 10px;">
+                            <img ng-src="{{Product.AvatarImage}}" alt="img" style="width: 80%;">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="single-curses-contert">
+                            <div class="details-img-bxo">
+                                <img ng-src="{{Product.AvatarImage}}" alt="" class="img-responsive">
+                            </div>
+                            <!-- REVIEW -->
+                            <div class="review-content">
+                                <h2>Reviews</h2>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="five-star-rating">
+                                                    <div class="rating-box">
+                                                        <span class="five">5</span>
+                                                        <ul class="list-unstyled">
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                        <span>8 Ratings</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 rating-btom-colum">
+                                                <div class="row">
+                                                    <div class="col-sm-12 rating-btom-padding">
+                                                        <div class="right-rating-text">
+                                                            <span>5 Stars</span>
+                                                            <span class="rating-color-yellow"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 rating-btom-padding">
+                                                        <div class="right-rating-text">
+                                                            <span>4 Stars</span>
+                                                            <span class="right-rating-color"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 rating-btom-padding">
+                                                        <div class="right-rating-text">
+                                                            <span>3 Stars</span>
+                                                            <span class="right-rating-color"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 rating-btom-padding">
+                                                        <div class="right-rating-text">
+                                                            <span>2 Stars</span>
+                                                            <span class="right-rating-color"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 rating-btom-padding">
+                                                        <div class="right-rating-text">
+                                                            <span>1 Stars</span>
+                                                            <span class="right-rating-color"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4 details single-curses-contert">
+                        <form action="#" method="post" id="add-item-form">
+                            <h4 style=" text-transform: uppercase">{{Product.Name}}</h4>
+                            <h5>{{Product.Price | currency : "" : 0}}đ</h5>
+                            <div class="- checksize  swatch clearfix" data-option="option2" data-option-index="1">
+                                <div class="header">Màu sắc:</div>
+                                <div class="select-swap sizeEachSwatch ">
+                                    <div class="swatch-element">
+                                        <label for="color" class="sd">
+                                            <span>{{Product.Color}}</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Product_size swatch">
+                                Kích cỡ: &nbsp;&nbsp;
+                                <input type="radio" name="size" value="S" /> <label>S</label> &nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="size" value="M" /> <label>M</label>&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="size" value="L" /> <label>L</label>&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="size" value="XL" /> <label>XL</label>&nbsp;&nbsp;&nbsp;
+                            </div>
+
+                            <div class="Product_quantity swatch">
+                                Số lượng: &nbsp;&nbsp;
+                                <input type="number" name="quantity" value="1" min="1" max="{{Product.Quantity}}" style="height:150%;" ng-model="ProSoLuong">
+                            </div>
+                            <div class="wrap-addcart swatch clearfix">
+                                <button type="button" id="add-to-cart" name="add" ng-click="addCart(Product)">Mua ngay</button>
+                            </div>
+                        </form>
+                        <!-- CMT -->
+                        <div class="leave_a_comment">
+                            <div class="row">
+                                <div class="col-sm-12" style="margin-top: 7em;">
+                                    <h4>Bình luận</h4>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <form>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <label class="input-label">name</label>
+                                                            <input type="text" placeholder="Enter your name" id="name" name="name" required>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label class="input-label">E-mail</label>
+                                                            <input type="email" placeholder="Enter your E-mail" name="email" required>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <label class="input-label">Message</label>
+                                                            <textarea placeholder="Type your comment" name="message" required></textarea>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <button type="submit">Gửi</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- San pham moi nhat -->
+        `<section class="single-courses-area-01" id="courses">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 section-header-box">
+                        <div class="section-header-l">
+                            <h2>Có thể bạn sẽ thích</h2>
+                        </div><!-- ends: .section-header -->
+                    </div>
+                </div>
+
+                <div class="row" ng-controller="NewProductCtrl">
+                    <div class="courses-wrapper owl-carousel" id="single-carousel-03">
+                        <div ng-repeat="sp in NewProducts">
+                            <div class="col-sm-12">
+                                <div class="single-courses">
+                                    <figure>
+                                        <div class="figure-img"><img ng-src="{{sp.AvatarImage}}" alt="" class="img-responsive"></div>
+                                        <figcaption>
+                                            <div><a ng-href="/Product/Detail?maSP={{sp.Id}}" class="read_more-btn">Xem ngay</a></div>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="courses-content-box">
+                                        <div class="courses-content">
+                                            <h5><a ng-href="/Product/Detail?maSP={{sp.Id}}">{{sp.Name}}</a></h5>
+                                            <p class="price">{{sp.Price | currency : "" : 0}}đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!--End .row-->
+            </div>
+        </section>
+        <!-- //san pham moi nhat -->
+</main>
+

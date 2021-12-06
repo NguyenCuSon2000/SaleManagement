@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+<div class="section-content col-sm-9" id="#donMua" ng-controller="CartController">
+    <h5 ng-hide="hid" style="height: 25vh; text-align: center; padding-top: 3.5em;"> Rất tiếc! Bạn chưa có đơn mua nào. <a ng-href="/Product/AllProduct">Shopping ngay thôi!</a></h5>
+    <div class="row" ng-show="hid" style="padding-top:3.5em;">
+        <!--table sp-->
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered tbl-shopping-cart" ng-init="getSPdaMua()">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Ngày mua</th>
+                            <th>Hình ảnh</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart_item" ng-repeat="x in dsCT">
+                            <td class="product-remove">{{$index+1}}</td>
+                            <td>{{x.Date}}</td>
+                            <td class="product-thumbnail"><a href="#"><img style="width:100px;" alt="member" ng-src="{{x.Product.AvatarImage}}"></a></td>
+                            <td class="product-name">
+                                <a ng-href="/Product/Detail?maSP={{x.Product.Id}}">{{x.Product.Name}}</a>
+                                <ul class="variation">
+                                    <li class="variation-size">Size: <span>{{x.Product.Size}}</span></li>
+                                    <li class="variation-size">Color: <span>{{x.Product.Color}}</span></li>
+                                </ul>
+                            </td>
+                            <td class="product-price"><span class="amount">{{x.Product.Price | currency : "" : 0}}đ</span></td>
+                            <td>{{x.Quantity}}</td>
+                            <td class="product-subtotal"><span class="amount">{{(x.Quantity * x.Product.Price) | currency : "" : 0}}đ</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!--table sp-->
+    </div>
+</div>

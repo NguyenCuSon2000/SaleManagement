@@ -1,0 +1,1 @@
+﻿Interface: là nơi nhận code xử lý từ repository và đáp ứng nhu cầu người dùng qua giao diện

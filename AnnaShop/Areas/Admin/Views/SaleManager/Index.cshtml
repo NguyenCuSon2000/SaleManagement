@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<main>
+    <div class="container-fluid" ng-controller="SaleController">
+        <h1 class="mt-4 text-center">Quản lý đơn hàng</h1>
+        <!-- Button trigger modal -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover dataTable" datatable="ng" width="100%" cellspacing="0" ng-init="GetAllOrder()">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã đơn hàng</th>
+                                <th>Tên tài khoản</th>
+                                <th>Ngày lập</th>
+                                <th>Ngày ship</th>
+                                <th>Tổng tiền</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in orders">
+                                <td>{{$index+1}}</td>
+                                <td>{{item.Id}}</td>
+                                <td>{{item.User.Name}}</td>
+                                <td>{{item.DateCreate.slice(6, -2) |  date : 'dd/MM/yyyy'}}</td>
+                                <td>{{item.DateShip.slice(6, -2) | date : 'dd/MM/yyyy'}}</td>
+                                <td>{{item.Price | currency : "" : 0}}đ</td>
+                                <td><a href="/Admin/OrderDetails/Index?OderForm_Id={{item.Id}}">Chi tiêt</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="spn">Chi tiết đơn hàng</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered tbl-shopping-cart" ng-init="ViewDetail()">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Hình ảnh</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Đơn giá</th>
+                                            <th>Số lượng</th>
+                                            <th>Thành tiền</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="cart_item" ng-repeat="x in list_detailOrder">
+                                            <td class="product-remove">{{$index+1}}</td>
+                                            <td class="product-thumbnail"><a href="#"><img style="width:100px;" alt="member" ng-src="{{x.Product.AvatarImage}}"></a></td>
+                                            <td class="product-name">
+                                                <a ng-href="/Product/Detail?maSP={{x.Product.Id}}">{{x.Product.Name}}</a>
+                                                <ul class="variation">
+                                                    <li class="variation-size">Size: <span>{{x.Product.Size}}</span></li>
+                                                    <li class="variation-size">Color: <span>{{x.Product.Color}}</span></li>
+                                                </ul>
+                                            </td>
+                                            <td class="product-price"><span class="amount">{{x.Product.Price | currency : "" : 0}}đ</span></td>
+                                            <td>{{x.Quantity}}</td>
+                                            <td class="product-subtotal"><span class="amount">{{(x.Quantity * x.Product.Price) | currency : "" : 0}}đ</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /modal -->
+    </div>
+</main>

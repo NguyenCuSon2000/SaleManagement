@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4a97d6f5e0b54d0c90d4f38b2f9b4245" Name="Diagram1" DisplayType="true" ZoomLevel="80" >
+        <EntityTypeShape EntityType="ShopAnna.Product" Width="1.625" PointX="0.5" PointY="2.875" />
+        <EntityTypeShape EntityType="ShopAnna.ProductCategory" Width="1.5" PointX="3.375" PointY="5.25" />
+        <AssociationConnector Association="ShopAnna.ProductCategoryProduct" />
+        <EntityTypeShape EntityType="ShopAnna.News" Width="1.5" PointX="10.25" PointY="0.5" />
+        <EntityTypeShape EntityType="ShopAnna.Slide" Width="1.5" PointX="12.25" PointY="0.5" />
+        <EntityTypeShape EntityType="ShopAnna.User" Width="1.5" PointX="8.125" PointY="0.5" />
+        <EntityTypeShape EntityType="ShopAnna.RoleUser" Width="1.5" PointX="10.25" PointY="3.375" />
+        <AssociationConnector Association="ShopAnna.RoleUserUser" />
+        <EntityTypeShape EntityType="ShopAnna.OderForm" Width="1.5" PointX="5.75" PointY="0.5" />
+        <EntityTypeShape EntityType="ShopAnna.DetailOrder" Width="1.5" PointX="3.375" PointY="0.5" />
+        <AssociationConnector Association="ShopAnna.OderFormDetalOder" />
+        <EntityTypeShape EntityType="ShopAnna.Sale" Width="1.5" PointX="3.375" PointY="2.75" />
+        <AssociationConnector Association="ShopAnna.UserOderForm" />
+        <EntityTypeShape EntityType="ShopAnna.ImportBill" Width="1.75" PointX="8" PointY="4.5" />
+        <EntityTypeShape EntityType="ShopAnna.DetailImportBill" Width="1.5" PointX="5.75" PointY="4.5" />
+        <AssociationConnector Association="ShopAnna.ImportBillDetailImportBill" />
+        <AssociationConnector Association="ShopAnna.SaleProduct" />
+        <AssociationConnector Association="ShopAnna.ProductDetalOder" />
+        <AssociationConnector Association="ShopAnna.ProductDetailImportBill" />
+        <AssociationConnector Association="ShopAnna.UserImportBill" />
+        <EntityTypeShape EntityType="ShopAnna.Image" Width="1.5" PointX="0.625" PointY="0.5" />
+        <AssociationConnector Association="ShopAnna.ProductImage" />
+        <EntityTypeShape EntityType="ShopAnna.Setting" Width="1.5" PointX="12.25" PointY="3.25" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

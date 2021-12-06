@@ -1,0 +1,52 @@
+﻿<script src="~/Angularjs/app.js"></script>
+
+<div class="collapse navbar-collapse edu-nav main-menu" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav pull-right">
+        <li class="active" ng-click="active()">
+            <a ng-href="/Home/Index">Trang chủ</a>
+        </li>
+        <li>
+            <a ng-href="/Product/AllProduct">Sản phẩm</a>
+            <!-- dropdwon start -->
+            <ul class="dropdown list-unstyled" ng-controller="MenuController">
+                <li ng-repeat="lsp in Categories"><a ng-href="/Product/Index?maLoai={{lsp.Id}}">{{lsp.Name}}</a></li>
+            </ul>
+            <!-- dropdown end -->
+        </li>
+        <li>
+            <a ng-href="/News/Index">Tin tức</a>
+        </li>
+        <li>
+            <a ng-href="/Home/AboutUs">Giới thiệu</a>
+        </li>
+        <li>
+            <a ng-href="/Home/Contact">Liên hệ</a>
+        </li>
+        <li>
+            <a ng-href="/Cart/Index"><i class="fa fa-shopping-bag"></i></a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-search search_btn"></i></a>
+            <div id="search">
+                <button type="button" class="close">×</button>
+                <form>
+                    <input type="search" value="" placeholder="Search here...." required />
+                    <button type="submit" class="btn btn_common blue">Search</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+@*<script>
+    $(document).ready(function () {
+        var url = window.location;
+        // Will only work if string in href matches with location
+        $('ul.nav a[ng-href="' + url + '"]').parent().addClass('active');
+
+        // Will also work for relative and absolute hrefs
+        $('ul.nav a').filter(function () {
+            return this.href == url;
+        }).parent().addClass('active').parent().parent().addClass('active');
+    });
+</script>*@

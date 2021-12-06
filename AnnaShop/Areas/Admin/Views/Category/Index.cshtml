@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<main >
+    <div class="container-fluid"  ng-controller="CategoryController">
+        <h1 class="mt-4 text-center">Quản lý danh mục sản phẩm</h1>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Add new category
+        </button>
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover dataTable" datatable="ng" width="100%" cellspacing="0" ng-init="GetAllData()">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã danh mục</th>
+                                <th>Tên danh mục</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in categories">
+                                <td>{{$index+1}}</td>
+                                <td>{{item.Id}}</td>
+                                <td>{{item.Name}}</td>
+                                <td>
+                                    <input type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal" ng-click="Update(item)" value="Update" />
+                                </td>
+                                <td>
+                                    <input type="button" class="btn btn-danger" value="Delete" ng-click="Delete(item)" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="spn">Add new category</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form name="Form">
+                                <div class="form-group row">
+                                    <label for="inputId" class="col-form-label col-sm-4">Mã danh mục:</label>
+                                    <input type="text" class="form-control col-sm-8" id="inputId" ng-model="CatId">
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-4 control-label col-sm-4">Tên danh mục:</label>
+                                    <input type="text" class="form-control col-sm-8" id="inputName" name="Name" ng-model="CatName" required>
+                                    <span class="text-danger" ng-show="CatName.$dirty && CatName.$invalid">The name is required.</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="button" class="btn btn-primary" id="btnSave" ng-click="InsertData()" value="Add" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /modal -->
+    </div>
+</main>
+
+
+
+
+

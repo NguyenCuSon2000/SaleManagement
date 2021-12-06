@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<main>
+    <div class="container-fluid" ng-controller="ProductController">
+        <h1 class="mt-4 text-center">Quản lý sản phẩm</h1>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="InsertAction()">
+            Add new product
+        </button>
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover dataTable" datatable="ng" width="100%" cellspacing="0" ng-init="GetAllData()">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Hình ảnh</th>
+                                <th>Giá</th>
+                                <th>Màu sắc</th>
+                                <th>Kích cỡ</th>
+                                <th>Số lượng</th>
+                                <th>Loại</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in products">
+                                <td>{{$index+1}}</td>
+                                <td>{{item.Name}}</td>
+                                <td><img ng-src="{{item.AvatarImage}}" /></td>
+                                <td>{{item.Price | currency : "" : 0}}đ</td>
+                                <td>{{item.Color}}</td>
+                                <td style="text-transform: uppercase;">{{item.Size}}</td>
+                                <td>{{item.Quantity}}</td>
+                                <td>{{item.Category.Name}}</td>
+                                <td>
+                                    <input type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"  ng-click="Update(item)" value="Sửa" />
+                            
+                                    <input type="button" class="btn btn-danger" value="Xóa" ng-click="Delete(item)" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="spn">Add new product</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form name="Form">
+                                <div class="form-group row">
+                                    <label for="inputName" class="col-form-label col-sm-3">Tên sản phẩm:</label>
+                                    <input type="text" class="form-control col-sm-4" id="inputName" ng-model="pName">
+                                </div>
+
+                                <div class="form-group row" style="position:relative;">
+                                    <label for="inputAvt" class="col-form-label col-sm-3">Hình ảnh:</label>
+                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                                    <img class="col-sm-4" id="user_img" ng-src="{{pAvartarPath}}" style="position:absolute; top:-40px; right:10px;" />
+                                    <input type="text" class="form-control col-sm-4 text-hide" id="inputAvartarPath" ng-model="pAvartarPath">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputName" class="col-form-label col-sm-3">Danh mục sản phẩm:</label>
+                                    <select id="cat" ng-init="GetAllCat()" ng-options="Cat.Name for Cat in categories" ng-model="pCategory">
+                                    </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPrice" class="col-form-label col-sm-3">Giá:</label>
+                                    <input type="text" class="form-control col-sm-4" id="inputPrice" ng-model="pPrice">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputColor" class="col-form-label col-sm-3">Màu sắc:</label>
+                                    <input type="text" class="form-control col-sm-4" id="inputColor" ng-model="pColor">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputSize" class="col-form-label col-sm-3">Kích cỡ:</label>
+                                    <input type="text" class="form-control col-sm-4" id="inputSize" ng-model="pSize">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputQuantity" class="col-form-label col-sm-3">Số lượng:</label>
+                                    <input type="text" class="form-control col-sm-4" id="inputQuantity" ng-model="pQuantity">
+                                </div>
+                                @*<div class="form-group row">
+            <label for="inputState" class="col-form-label col-sm-3">Trạng thái:</label>
+            <input type="text" class="form-control col-sm-4" id="inputState" ng-model="pState">
+        </div>*@
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="button" class="btn btn-primary" id="btnSave" ng-click="InsertData()" value="Add" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @Html.Hidden("EmpID_")
+        <!-- /modal -->
+    </div>
+</main>
+
+<script type="text/javascript">
+    function show(input) {
+        if (input.files && input.files[0]) {
+            var filerdr = new FileReader();
+            filerdr.onload = function (e) {
+                $('#user_img').attr('src', e.target.result);
+            }
+            filerdr.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

@@ -1,0 +1,60 @@
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\obj\Debug\Repositories.csproj.CoreCompileInputs.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\Repositories.dll.config
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\Repositories.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\Repositories.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\DataAccess.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\EntityFramework.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\EntityFramework.SqlServer.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\Interfaces.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\Model.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\DataAccess.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\DataAccess.dll.config
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\Interfaces.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\Model.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\Model.dll.config
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\EntityFramework.xml
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\bin\Debug\EntityFramework.SqlServer.xml
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\obj\Debug\Repositories.csproj.CopyComplete
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\obj\Debug\Repositories.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Repositories\obj\Debug\Repositories.pdb
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\Repositories.dll.config
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\Repositories.dll
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\Repositories.pdb
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\DataAccess.dll
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\Interfaces.dll
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\Model.dll
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\DataAccess.pdb
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\DataAccess.dll.config
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\Interfaces.pdb
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\Model.pdb
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\Model.dll.config
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Downloads\AnnaShop\Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\AnnaShop\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\AnnaShop\Repositories\obj\Debug\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\AnnaShop\Repositories\obj\Debug\Repositories.csproj.CopyComplete
+C:\Users\Admin\Downloads\AnnaShop\Repositories\obj\Debug\Repositories.dll
+C:\Users\Admin\Downloads\AnnaShop\Repositories\obj\Debug\Repositories.pdb
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\Repositories.dll.config
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\Repositories.dll
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\Repositories.pdb
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\DataAccess.dll
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\EntityFramework.dll
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\Interfaces.dll
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\Model.dll
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\DataAccess.pdb
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\DataAccess.dll.config
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\Interfaces.pdb
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\Model.pdb
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\Model.dll.config
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\EntityFramework.xml
+D:\ASP.NET\AnnaShop\Repositories\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET\AnnaShop\Repositories\obj\Debug\Repositories.csproj.AssemblyReference.cache
+D:\ASP.NET\AnnaShop\Repositories\obj\Debug\Repositories.csproj.CoreCompileInputs.cache
+D:\ASP.NET\AnnaShop\Repositories\obj\Debug\Repositories.csproj.CopyComplete
+D:\ASP.NET\AnnaShop\Repositories\obj\Debug\Repositories.dll
+D:\ASP.NET\AnnaShop\Repositories\obj\Debug\Repositories.pdb

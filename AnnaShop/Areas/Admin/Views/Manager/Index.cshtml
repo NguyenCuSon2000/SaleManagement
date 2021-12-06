@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+
+<main ng-controller="ThongKeController">
+    <div class="container-fluid">
+        <h1 class="mt-4">Tổng quan</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Tổng quan</li>
+        </ol>
+        <!-- cards -->
+        <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">Đang vận chuyển (20)</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">Chưa xác thực (5)</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-success text-white mb-4">
+                    <div class="card-body">Đơn đã vận chuyển (59)</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-danger text-white mb-4">
+                    <div class="card-body">Hoàn đơn (0)</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="card mb-4" ng-init="getData()">
+                    <div class="card-header">
+                        <i class="fas fa-chart-bar mr-1"></i>
+                        Biểu đồ thống kê doanh thu năm {{year}}
+                    </div>
+                    <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
+                    <div class="card-footer small text-muted hvn"></div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card mb-4" ng-init="getChartLoaiSP()">
+                    <div class="card-header">
+                        <i class="fas fa-chart-pie mr-1"></i>
+                        Thống kê doanh thu theo loại sản phẩm
+                    </div>
+                    <div class="card-body"><canvas id="myPieChart" width="100%" height="50"></canvas></div>
+                    <p class="card-footer small text-muted hvn" id="hvn"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+</main>

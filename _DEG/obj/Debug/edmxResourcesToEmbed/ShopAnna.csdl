@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ShopAnna" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ShopAnnaContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Products" EntityType="ShopAnna.Product" />
+    <EntitySet Name="ProductCategories" EntityType="ShopAnna.ProductCategory" />
+    <AssociationSet Name="ProductCategoryProduct" Association="ShopAnna.ProductCategoryProduct">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <EntitySet Name="News" EntityType="ShopAnna.News" />
+    <EntitySet Name="Slides" EntityType="ShopAnna.Slide" />
+    <EntitySet Name="Users" EntityType="ShopAnna.User" />
+    <EntitySet Name="RoleUsers" EntityType="ShopAnna.RoleUser" />
+    <AssociationSet Name="RoleUserUser" Association="ShopAnna.RoleUserUser">
+      <End Role="RoleUser" EntitySet="RoleUsers" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="OderForms" EntityType="ShopAnna.OderForm" />
+    <EntitySet Name="DetailOrders" EntityType="ShopAnna.DetailOrder" />
+    <AssociationSet Name="OderFormDetalOder" Association="ShopAnna.OderFormDetalOder">
+      <End Role="OderForm" EntitySet="OderForms" />
+      <End Role="DetalOder" EntitySet="DetailOrders" />
+    </AssociationSet>
+    <EntitySet Name="Sales" EntityType="ShopAnna.Sale" />
+    <AssociationSet Name="UserOderForm" Association="ShopAnna.UserOderForm">
+      <End Role="User" EntitySet="Users" />
+      <End Role="OderForm" EntitySet="OderForms" />
+    </AssociationSet>
+    <EntitySet Name="ImportBills" EntityType="ShopAnna.ImportBill" />
+    <EntitySet Name="DetailImportBills" EntityType="ShopAnna.DetailImportBill" />
+    <AssociationSet Name="ImportBillDetailImportBill" Association="ShopAnna.ImportBillDetailImportBill">
+      <End Role="ImportBill" EntitySet="ImportBills" />
+      <End Role="DetailImportBill" EntitySet="DetailImportBills" />
+    </AssociationSet>
+    <AssociationSet Name="SaleProduct" Association="ShopAnna.SaleProduct">
+      <End Role="Sale" EntitySet="Sales" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="ProductDetalOder" Association="ShopAnna.ProductDetalOder">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="DetalOder" EntitySet="DetailOrders" />
+    </AssociationSet>
+    <AssociationSet Name="ProductDetailImportBill" Association="ShopAnna.ProductDetailImportBill">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="DetailImportBill" EntitySet="DetailImportBills" />
+    </AssociationSet>
+    <AssociationSet Name="UserImportBill" Association="ShopAnna.UserImportBill">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ImportBill" EntitySet="ImportBills" />
+    </AssociationSet>
+    <EntitySet Name="Images" EntityType="ShopAnna.Image" />
+    <AssociationSet Name="ProductImage" Association="ShopAnna.ProductImage">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Image" EntitySet="Images" />
+    </AssociationSet>
+    <EntitySet Name="Settings" EntityType="ShopAnna.Setting" />
+  </EntityContainer>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Color" Type="String" Nullable="false" />
+    <Property Name="Size" Type="String" Nullable="false" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProductCategory" Relationship="ShopAnna.ProductCategoryProduct" FromRole="Product" ToRole="ProductCategory" />
+    <NavigationProperty Name="Sale" Relationship="ShopAnna.SaleProduct" FromRole="Product" ToRole="Sale" />
+    <NavigationProperty Name="DetalOders" Relationship="ShopAnna.ProductDetalOder" FromRole="Product" ToRole="DetalOder" />
+    <NavigationProperty Name="DetailImportBills" Relationship="ShopAnna.ProductDetailImportBill" FromRole="Product" ToRole="DetailImportBill" />
+    <NavigationProperty Name="Images" Relationship="ShopAnna.ProductImage" FromRole="Product" ToRole="Image" />
+    <Property Name="AvatarImage" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="ShopAnna.ProductCategoryProduct" FromRole="ProductCategory" ToRole="Product" />
+  </EntityType>
+  <Association Name="ProductCategoryProduct">
+    <End Type="ShopAnna.ProductCategory" Role="ProductCategory" Multiplicity="1" />
+    <End Type="ShopAnna.Product" Role="Product" Multiplicity="*" />
+  </Association>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Heading" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="Image" Type="String" Nullable="false" />
+    <Property Name="DateCreate" Type="DateTime" Nullable="false" />
+    <Property Name="View" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Slide">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" Nullable="false" />
+    <Property Name="Heading" Type="String" Nullable="false" />
+    <Property Name="Link" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="PassWord" Type="String" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" />
+    <Property Name="Phone" Type="String" Nullable="false" />
+    <Property Name="Image" Type="String" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="RoleUser" Relationship="ShopAnna.RoleUserUser" FromRole="User" ToRole="RoleUser" />
+    <Property Name="UserName" Type="String" Nullable="false" />
+    <NavigationProperty Name="OderForms" Relationship="ShopAnna.UserOderForm" FromRole="User" ToRole="OderForm" />
+    <NavigationProperty Name="ImportBills" Relationship="ShopAnna.UserImportBill" FromRole="User" ToRole="ImportBill" />
+  </EntityType>
+  <EntityType Name="RoleUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="ShopAnna.RoleUserUser" FromRole="RoleUser" ToRole="User" />
+  </EntityType>
+  <Association Name="RoleUserUser">
+    <End Type="ShopAnna.RoleUser" Role="RoleUser" Multiplicity="1" />
+    <End Type="ShopAnna.User" Role="User" Multiplicity="*" />
+  </Association>
+  <EntityType Name="OderForm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" Nullable="false" />
+    <Property Name="Phone" Type="String" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Note" Type="String" Nullable="false" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+    <Property Name="DateCreate" Type="DateTime" Nullable="false" />
+    <Property Name="DateShip" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="DetalOders" Relationship="ShopAnna.OderFormDetalOder" FromRole="OderForm" ToRole="DetalOder" />
+    <NavigationProperty Name="User" Relationship="ShopAnna.UserOderForm" FromRole="OderForm" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DetailOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="OderForm" Relationship="ShopAnna.OderFormDetalOder" FromRole="DetalOder" ToRole="OderForm" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="ShopAnna.ProductDetalOder" FromRole="DetalOder" ToRole="Product" />
+  </EntityType>
+  <Association Name="OderFormDetalOder">
+    <End Type="ShopAnna.OderForm" Role="OderForm" Multiplicity="1" />
+    <End Type="ShopAnna.DetailOrder" Role="DetalOder" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Percent" Type="Double" Nullable="false" />
+    <Property Name="DateBegin" Type="DateTime" Nullable="false" />
+    <Property Name="DateEnd" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="ShopAnna.SaleProduct" FromRole="Sale" ToRole="Product" />
+  </EntityType>
+  <Association Name="UserOderForm">
+    <End Type="ShopAnna.User" Role="User" Multiplicity="1" />
+    <End Type="ShopAnna.OderForm" Role="OderForm" Multiplicity="*" />
+  </Association>
+  <EntityType Name="ImportBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="DateCreate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="DetailImportBills" Relationship="ShopAnna.ImportBillDetailImportBill" FromRole="ImportBill" ToRole="DetailImportBill" />
+    <NavigationProperty Name="User" Relationship="ShopAnna.UserImportBill" FromRole="ImportBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DetailImportBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="ImportBill" Relationship="ShopAnna.ImportBillDetailImportBill" FromRole="DetailImportBill" ToRole="ImportBill" />
+    <NavigationProperty Name="Product" Relationship="ShopAnna.ProductDetailImportBill" FromRole="DetailImportBill" ToRole="Product" />
+  </EntityType>
+  <Association Name="ImportBillDetailImportBill">
+    <End Type="ShopAnna.ImportBill" Role="ImportBill" Multiplicity="1" />
+    <End Type="ShopAnna.DetailImportBill" Role="DetailImportBill" Multiplicity="*" />
+  </Association>
+  <Association Name="SaleProduct">
+    <End Type="ShopAnna.Sale" Role="Sale" Multiplicity="0..1" />
+    <End Type="ShopAnna.Product" Role="Product" Multiplicity="*" />
+  </Association>
+  <Association Name="ProductDetalOder">
+    <End Type="ShopAnna.Product" Role="Product" Multiplicity="1" />
+    <End Type="ShopAnna.DetailOrder" Role="DetalOder" Multiplicity="*" />
+  </Association>
+  <Association Name="ProductDetailImportBill">
+    <End Type="ShopAnna.Product" Role="Product" Multiplicity="1" />
+    <End Type="ShopAnna.DetailImportBill" Role="DetailImportBill" Multiplicity="*" />
+  </Association>
+  <Association Name="UserImportBill">
+    <End Type="ShopAnna.User" Role="User" Multiplicity="1" />
+    <End Type="ShopAnna.ImportBill" Role="ImportBill" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Img" Type="String" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="ShopAnna.ProductImage" FromRole="Image" ToRole="Product" />
+  </EntityType>
+  <Association Name="ProductImage">
+    <End Type="ShopAnna.Product" Role="Product" Multiplicity="1" />
+    <End Type="ShopAnna.Image" Role="Image" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" Nullable="false" />
+    <Property Name="HotLine" Type="String" Nullable="false" />
+    <Property Name="Facebook" Type="String" Nullable="false" />
+    <Property Name="Zalo" Type="String" Nullable="false" />
+    <Property Name="Instagram" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

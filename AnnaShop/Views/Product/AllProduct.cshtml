@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "AllProduct";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<article class="courses" ng-controller="AllProduct">
+    <section style="padding-top: 3em;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="intro-text ">
+                        <h3 style="padding-bottom:0;">Tất cả sản phẩm</h3>
+                        <h5><span><a ng-href="/Home/Index">Home <i class='fa fa-angle-right'></i></a></span> <span class="b-active">Tát cả sản phẩm</span></h5>
+                    </div>
+                </div>
+                <div col-sm-3></div>
+                <div class="col-sm-2">
+                    Bộ lọc:
+                    <select style="padding:5px; line-height:1.8em;" ng-model="myOrderBy" style="line-height:2em; height: 2em;">
+                        <option value="moiNhat">Tất cả sản phẩm</option>
+                        <option value="Name">Sắp xếp theo tên</option>
+                        <option value="Price">Sắp xếp theo giá</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    Tìm kiếm: &nbsp;
+                    <input type="text" ng-model="Search.Name" style="padding:5px; line-height:1.45em;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-02" style="padding-top: 3em;" >
+        <div class="container">
+            <div class="row courses-r-margin-bottom" ng-init="getAll()">
+                <div class="col-sm-4 col-md-3 single-courses-box" style="margin: 1em 0" ng-repeat="p in Products |  orderBy:myOrderBy | filter:Search">
+                    <div class="single-courses">
+                        <figure>
+                            <a ng-href="/Product/Detail?maSP={{p.Id}}">
+                                <div class="figure-img">
+                                    <img ng-src="{{p.AvatarImage}}" alt="" class="img-responsive">
+                                </div>
+                            </a>
+                        </figure>
+                        <div class="courses-content-box">
+                            <div class="courses-content">
+                                <h3><a ng-href="/Product/Detail?maSP={{p.Id}}">{{p.Name}}</a></h3>
+                                <p class="price" style="font-weight: 600; color: darkred;">{{p.Price | currency : "" : 0}}đ</p>
+                            </div>
+                        </div>
+                    </div><!-- Ends: .single courses -->
+                </div><!-- Ends: . -->
+            </div><!--End .row-->
+        </div>
+    </section><!-- Ends: . -->
+    <!--Start Courses Area Section-->
+
+</article>
+
+

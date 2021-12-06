@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<article class="courses">
+    <section style="padding-top: 3em;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="intro-text ">
+                        <h3 style="padding-bottom:0;">Tin tức</h3>
+                        <h5><span><a ng-href="/Home/Index">Trang chủ <i class='fa fa-angle-right'></i></a></span> <span class="b-active">Tát cả tin tức</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<!-- Tin tuc -->
+<section class="events-area" ng-controller="NewsCtrl" style="padding-top:3em;">
+    <div class="container" ng-init="getAllNews()">
+        <div class="row">
+            <div class="col-sm-12 events-full-box" ng-repeat="news in AllNewses">
+                <div class="events-single-box">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img ng-src="{{news.Image}}" alt="" class="img-responsive">
+                        </div>
+
+                        <div class="col-sm-7 event-info">
+                            <h3>{{news.Heading}}</h3>
+                            <p>{{news.Description}}</p>
+                            <a class="event-btn" href="#">Xem thêm<i class="fa fa-long-arrow-right events-btn-icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //Tin tuc -->

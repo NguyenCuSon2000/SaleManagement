@@ -1,0 +1,24 @@
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\Model.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\Model.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\obj\Debug\Model.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\obj\Debug\Model.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\obj\Debug\Model.csprojAssemblyReference.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\Model.dll.config
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\EntityFramework.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\EntityFramework.xml
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\Model\obj\Debug\Model.csproj.CopyComplete
+D:\ASP.NET\AnnaShop\Model\bin\Debug\Model.dll.config
+D:\ASP.NET\AnnaShop\Model\bin\Debug\Model.dll
+D:\ASP.NET\AnnaShop\Model\bin\Debug\Model.pdb
+D:\ASP.NET\AnnaShop\Model\bin\Debug\EntityFramework.dll
+D:\ASP.NET\AnnaShop\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET\AnnaShop\Model\bin\Debug\EntityFramework.xml
+D:\ASP.NET\AnnaShop\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET\AnnaShop\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\ASP.NET\AnnaShop\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\ASP.NET\AnnaShop\Model\obj\Debug\Model.csproj.CopyComplete
+D:\ASP.NET\AnnaShop\Model\obj\Debug\Model.dll
+D:\ASP.NET\AnnaShop\Model\obj\Debug\Model.pdb

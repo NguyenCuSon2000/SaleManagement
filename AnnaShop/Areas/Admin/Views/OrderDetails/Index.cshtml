@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<main >
+    <div class="container-fluid" ng-controller="SaleController">
+        <h1 class="mt-4 text-center">Chi tiết đơn hàng</h1>
+        <!-- Button trigger modal -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover dataTable" datatable="ng" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Hình ảnh</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cart_item" ng-repeat="x in list_detailOrder">
+                                <td class="product-remove">{{$index + 1}}</td>
+                                <td class="product-thumbnail"><a href="#"><img style="width:100px;" alt="member" ng-src="{{x.Product.AvatarImage}}"></a></td>
+                                <td class="product-name">
+                                    <a ng-href="/Product/Detail?maSP={{x.Product.Id}}">{{x.Product.Name}}</a>
+                                    <ul class="variation">
+                                        <li class="variation-size">Size: <span>{{x.Product.Size}}</span></li>
+                                        <li class="variation-size">Color: <span>{{x.Product.Color}}</span></li>
+                                    </ul>
+                                </td>
+                                <td class="product-price"><span class="amount">{{x.Product.Price | currency : "" : 0}}đ</span></td>
+                                <td>{{x.Quantity}}</td>
+                                <td class="product-subtotal"><span class="amount">{{(x.Quantity * x.Product.Price) | currency : "" : 0}}đ</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

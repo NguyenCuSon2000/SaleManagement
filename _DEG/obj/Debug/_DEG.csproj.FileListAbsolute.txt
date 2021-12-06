@@ -1,0 +1,14 @@
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\_DEG\bin\Debug\_DEG.dll.config
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\_DEG\bin\Debug\_DEG.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\_DEG\bin\Debug\_DEG.pdb
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\_DEG\obj\Debug\_DEG.csprojAssemblyReference.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\_DEG\obj\Debug\_DEG.csproj.CoreCompileInputs.cache
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\_DEG\obj\Debug\_DEG.dll
+F:\KI_I_NAM_3\Project_03\Source Code\AnnaShop\_DEG\obj\Debug\_DEG.pdb
+D:\ASP.NET\AnnaShop\_DEG\bin\Debug\_DEG.dll.config
+D:\ASP.NET\AnnaShop\_DEG\bin\Debug\_DEG.dll
+D:\ASP.NET\AnnaShop\_DEG\bin\Debug\_DEG.pdb
+D:\ASP.NET\AnnaShop\_DEG\obj\Debug\_DEG.csproj.AssemblyReference.cache
+D:\ASP.NET\AnnaShop\_DEG\obj\Debug\_DEG.csproj.CoreCompileInputs.cache
+D:\ASP.NET\AnnaShop\_DEG\obj\Debug\_DEG.dll
+D:\ASP.NET\AnnaShop\_DEG\obj\Debug\_DEG.pdb

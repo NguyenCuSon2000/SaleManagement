@@ -1,0 +1,3 @@
+﻿Models: Chứa các đối tượng của project
+Các class đại diện cho các đối tượng
+Các class trong models chỉ nên chứa thuộc tính của đối tượng

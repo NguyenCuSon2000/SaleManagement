@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<article class="courses">
+    <section style="padding-top: 3em;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="intro-text ">
+                        <h3 style="padding-bottom:0;">Sản phẩm</h3>
+                        <h5><span><a ng-href="/Home/Index">Home <i class='fa fa-angle-right'></i></a></span> <span class="b-active">Sản phẩm</span></h5>
+                    </div>
+                </div>
+                <div col-sm-3></div>
+                <div class="col-sm-3">
+                    <b>Bộ lọc: &nbsp;</b>
+                    <select style="line-height:2em; height: 2em;">
+                        <option value="moiNhat"></option>
+                        <option value="moiNhat">Sản phẩm mới nhất</option>
+                        <option value="giaTang">Sắp xếp tăng dần theo giá</option>
+                        <option value="giaGiam">Sắp xếp giảm dần theo giá</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-02" ng-controller="ProductByCategory" style="padding-top:3em;">
+        <div class="container">
+
+            <div class="row courses-r-margin-bottom">
+                <div class="col-sm-6 col-md-3 single-courses-box" style="margin: 1em 0" ng-repeat="p in Products">
+                    <div class="single-courses">
+                        <figure>
+                            <a ng-href="/Product/Detail?maSP={{p.Id}}">
+                                <div class="figure-img">
+                                    <img ng-src="{{p.AvatarImage}}" alt="" class="img-responsive">
+                                </div>
+                            </a>
+                        </figure>
+                        <div class="courses-content-box">
+                            <div class="courses-content">
+                                <h3><a ng-href="/Product/Detail?maSP={{p.Id}}">{{p.Name}}</a></h3>
+                                <p class="price" style="font-weight: 600; color: darkred;">{{p.Price | currency : "" : 0}}đ</p>
+                            </div>
+                        </div>
+                    </div><!-- Ends: .single courses -->
+                </div><!-- Ends: . -->
+            </div><!--End .row-->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="view_more_btn">
+                        <a href="#" class="view-more-item">view all product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Ends: . -->
+    <!-- ./ End Courses Area section -->
+</article>

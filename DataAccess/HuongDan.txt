@@ -1,0 +1,2 @@
+﻿DataAccess: là nơi TRỰC TIẾP làm việc với cơ sở dữ liệu
+Thực hiện việc thêm, sửa, xóa cơ sở dữ liệu
